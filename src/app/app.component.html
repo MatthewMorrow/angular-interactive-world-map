@@ -1,0 +1,20 @@
+<div>
+  <div id="left-column">
+    <app-world (selectedDetails)="updateSelectedProperties($event)"></app-world>
+  </div>
+  
+  <div id="right-column">
+    <app-country
+      [countryId]="selectedProperties.countryId"
+      [countryCapital]="selectedProperties.capital"
+      [countryRegion]="selectedProperties.region"
+      [countryIncomeLevel]="selectedProperties.incomeLevel"
+      [countryLatitude]="selectedProperties.latitude"
+      [countryLongitude]="selectedProperties.longitude">
+    </app-country>
+  </div>
+</div>
+
+<footer class="footer">
+  <p>This project uses data from the <a href="https://www.worldbank.org/en/home" target="_blank">World Bank</a>.</p>
+</footer>
